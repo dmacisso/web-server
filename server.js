@@ -1,19 +1,7 @@
 var express = require('express');
 var app = express();
 const PORT = 3000;
-const DTSTAMP = new Date().toString();
-
-var middleware = {
-  requireAuthentication: function(req, res, next) {
-      console.log('private route hit!');
-      next();
-  },
-    logger: function(req, res, next) {
-    console.log('Requests: ' + DTSTAMP + ' =>' + req.method + ' ' + req.originalUrl);
-    next();
-        
-    }
-};
+var middleware = require('./middleware.js');
 
 //req = request, res = response
 // get responds to the http request method
