@@ -9,7 +9,7 @@ var middleware = {
       next();
   },
     logger: function(req, res, next) {
-    console.log('Requests: ' + DTSTAMP + ' ->' + req.method + ' ' + req.originalUrl);
+    console.log('Requests: ' + DTSTAMP + ' =>' + req.method + ' ' + req.originalUrl);
     next();
         
     }
